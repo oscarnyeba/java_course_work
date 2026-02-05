@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.student.registration.app.PrimaryController">
+   <children>
+      <Label text="New Student Registration Form" />
+      <GridPane hgap="10.0" vgap="5.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" minWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" />
+            <ColumnConstraints hgrow="NEVER" minWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Student First Name" GridPane.rowIndex="0" />
+            <TextField fx:id="firstNameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label fx:id="firstNameError" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+
+            <Label text="Student Last Name" GridPane.rowIndex="1" />
+            <TextField fx:id="lastNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="lastNameError" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+            <Label text="Email Address" GridPane.rowIndex="2" />
+            <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="emailError" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+            <Label text="Confirm Email Address" GridPane.rowIndex="3" />
+            <TextField fx:id="confirmEmailField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="confirmEmailError" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+            <Label text="Password" GridPane.rowIndex="4" />
+            <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="passwordError" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+
+            <Label text="Confirm Password" GridPane.rowIndex="5" />
+            <PasswordField fx:id="confirmPasswordField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="confirmPasswordError" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+
+            <Label text="Date of Birth" GridPane.rowIndex="6" />
+            <HBox spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <children>
+                  <ComboBox fx:id="yearCombo" prefWidth="150.0" promptText="Select Year" />
+                  <ComboBox fx:id="monthCombo" prefWidth="150.0" promptText="Select Month" />
+                  <ComboBox fx:id="dayCombo" prefWidth="150.0" promptText="Select Day" />
+               </children>
+            </HBox>
+            <Label fx:id="dobError" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+
+            <Label text="Department" GridPane.rowIndex="7" />
+            <VBox spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <children>
+                  <RadioButton fx:id="civilRadio" text="Civil" />
+                  <RadioButton fx:id="cseRadio" text="Computer Science and Engineering" />
+                  <RadioButton fx:id="electricalRadio" text="Electrical" />
+                  <RadioButton fx:id="ecRadio" text="Electronics and Communication" />
+                  <RadioButton fx:id="mechanicalRadio" text="Mechanical" />
+               </children>
+            </VBox>
+            <Label fx:id="departmentError" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+
+            <Label text="Gender" GridPane.valignment="TOP" GridPane.rowIndex="8" />
+            <HBox spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <children>
+                  <RadioButton fx:id="maleRadio" text="Male" />
+                  <RadioButton fx:id="femaleRadio" text="Female" />
+               </children>
+            </HBox>
+            <Label fx:id="genderError" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+         </children>
+      </GridPane>
+      <Label text="Your Data Is Below:" />
+      <TextArea fx:id="dataTextArea" editable="false" prefHeight="100.0" prefWidth="500.0" />
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <Button fx:id="submitButton" onAction="#handleSubmit" text="Submit" />
+            <Button fx:id="cancelButton" onAction="#handleCancel" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
