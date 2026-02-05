@@ -28,6 +28,7 @@ Vehicle auction tracking system that calculates profit/loss.
 - **Nyeba Oscar Mathew** - VU-BCS-2503-1204-EVE
 - **Nalwoga Madrine** - VU-BIT-2503-2460-EVE
 - **Namagambe Precious** - VU-BSC-2503-0355-EVE
+- KINTU BRIAN  -VU-DIT-2503-0306-EVE
 
 **Course**: Object Oriented Programming  
 **Institution**: Victoria University
